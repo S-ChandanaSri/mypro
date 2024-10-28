@@ -4,7 +4,7 @@ import Select from "react-select";
 import countryList from "react-select-country-list";
 //import { useLocation, useNavigate } from 'react-router-dom';
 
-export default function Address({ listingid }) {
+export default function Address() {
   const iframeRef = useRef(null);
   const [loadingg, setLoadingg] = useState(true);
   const options = useMemo(() => countryList().getData(), []);
