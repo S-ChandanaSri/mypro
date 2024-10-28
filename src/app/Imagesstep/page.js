@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import Footerimages from "../Footerimages/page.js";
-import Amenities from "../Amenities/page.js";
+import Amenities from "../Amenities/page.tsx";
 import { ImageList } from "@mui/material";
 import Title from "../Title/page.js";
 import Description from "../Description/page.js";
