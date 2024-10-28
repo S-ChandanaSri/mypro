@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import Select from "react-select";
 import countryList from "react-select-country-list";
@@ -34,84 +34,6 @@ export default function Address() {
       country_code: selectedOption.value,
     }));
   };
-
-  
-
-  useEffect(() => {
-    if (iframeRef.current) {
-      const iframe = iframeRef.current;
-      const url = iframe.getAttribute("src");
-      console.log("i got it", url);
-
-      const params = new URLSearchParams(new URL(url).search);
-      const embedParams = params.get("pb");
-
-      const latitudeMatch = embedParams.match(/!3d(-?\d+\.\d+)/);
-      const longitudeMatch = embedParams.match(/!2d(-?\d+\.\d+)/);
-
-      const latitude = latitudeMatch ? latitudeMatch[1] : "Not found";
-      const longitude = longitudeMatch ? longitudeMatch[1] : "Not found";
-
-      console.log(`Latitude: ${latitude}`);
-      console.log(`Longitude: ${longitude}`);
-    }
-
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        const { latitude, longitude } = pos.coords;
-        const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
-
-        fetch(url)
-          .then((res) => res.json())
-          .then((data) => {
-            console.log("yeeee", data);
-            const country = data.address.country || "";
-            const countryCode = data.address.country_code || "";
-
-            console.log("Fetched country:", country);
-            console.log("Fetched countryCode:", countryCode);
-
-            const selectedOption = options.find(
-              (option) =>
-                option.value.toUpperCase() === countryCode.toUpperCase(),
-            );
-
-            console.log("options:", options);
-            console.log("Selected Option:", selectedOption);
-
-            setAddress({
-              road: data.address.road || data.address.street || "",
-              city:
-                data.address.city ||
-                data.address.town ||
-                data.address.city_district ||
-                "",
-              country: country,
-              zipcode: data.address.zipcode || data.address.postcode || "",
-              street: data.address.street || data.address.colony || "",
-              state: data.address.state || "",
-              country_code: countryCode,
-              district: data.address.state_district || "",
-              mandal: data.address.county || "",
-              village: data.address.suburb || "",
-            });
-
-            setValue(selectedOption || null);
-            setLoadingg(false);
-          })
-          .catch((err) => {
-            console.error("Error fetching address:", err);
-            setError("Unable to fetch address.");
-            setLoadingg(false);
-          });
-      },
-      (err) => {
-        console.error("Geolocation error:", err);
-        setError("Unable to get location.");
-        setLoadingg(false);
-      },
-    );
-  }, [options]);
 
   if (loadingg) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
