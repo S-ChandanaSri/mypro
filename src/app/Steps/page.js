@@ -216,31 +216,7 @@ export default function Steps() {
     } else if (step === 7) {
       console.log("Listing ID before fetch:", listingid);
 
-      fetch("http://localhost:3001/amenities2", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          privateroom,
-          privateroom1,
-          privateroom2,
-          id: listingid,
-        }),
-      })
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          }
-          return response.text().then((text) => {
-            throw new Error(text);
-          });
-        })
-        .then((data) => {
-          console.log("Response data:", data);
-          console.log("success");
-        })
-        .catch((err) => console.error("Error:", err));
+    
 
       setIsLoading(true);
       setTimeout(() => {
@@ -256,7 +232,7 @@ export default function Steps() {
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
-        router.push("/components/Imagesstep");
+        router.push("/Imagesstep");
       }, 3000);
     }
   };
@@ -275,7 +251,7 @@ export default function Steps() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#FFFFFF]">
-      <Navbar />
+      
       <div className="flex-grow">
         <div className="flex min-h-screen items-center">
           {step === 0 && <Options />}
@@ -304,7 +280,7 @@ export default function Steps() {
             </>
           )}
           {step === 2 && (
-            <Place
+            <Place 
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}
               setIsLoading={setIsLoading}

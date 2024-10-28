@@ -10,26 +10,7 @@ export default function Peopletype({ listingid }) {
   const handlepeople = (secondoption) => {
     setPeopletype(secondoption.label);
   };
-  fetch("http://localhost:3001/peopletype", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ peopletype, id: listingid }),
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      return response.text().then((text) => {
-        throw new Error(text);
-      });
-    })
-    .then((data) => {
-      console.log("Response data:", data);
-      console.log("success");
-    })
-    .catch((err) => console.error("Error:", err));
+ 
 
   return (
     <People

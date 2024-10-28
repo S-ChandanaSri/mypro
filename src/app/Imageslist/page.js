@@ -106,28 +106,7 @@ export default function Imageslist({ listingid }) {
 
   console.log("88888888888", files);
 
-  fetch("http://localhost:3001/imageslist", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ files, id: listingid }),
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      return response.text().then((text) => {
-        throw new Error(text);
-      });
-    })
-    .then((data) => {
-      console.log("Response data:", data);
-      console.log("success");
-
-      console.log("success", data.id);
-    })
-    .catch((err) => console.error("Error:", err));
+ 
 
   const handleDragStart = (ev) => {
     const id = ev.currentTarget.id;

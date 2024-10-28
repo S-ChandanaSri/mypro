@@ -60,16 +60,6 @@ export default function Propertylisting() {
   const [listt, setListt] = useState([]);
   const [query, setQuery] = useState("");
 
-  useEffect(() => {
-    fetch("http://localhost:3001/listings")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("l", data);
-
-        setListt(data);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
 
   let lastId = null;
   console.log("p", listt);

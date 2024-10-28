@@ -18,28 +18,7 @@ export default function Description({ listingid }) {
   };
 
   console.log("99999", selectedopt);
-  fetch("http://localhost:3001/describeproperty", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ selectedopt, id: listingid }),
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      return response.text().then((text) => {
-        throw new Error(text);
-      });
-    })
-    .then((data) => {
-      console.log("Response data:", data);
-      console.log("success");
-
-      console.log("success", data.id);
-    })
-    .catch((err) => console.error("Error:", err));
+ 
   return (
     <Describehome
       title={strings.Describehome.heading}

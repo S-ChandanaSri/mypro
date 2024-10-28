@@ -178,7 +178,7 @@ export default function Dashboard() {
                       className="object-contain"
                     />
                     <input
-                      value=""
+                      defaultValue=""
                       placeholder="Search"
                       className="w-full outline-none"
                     />

@@ -120,7 +120,7 @@ export default function Imagesstep() {
       setTimeout(() => {
         setIsLoading(false);
         setCurrentstep((prevStep) => prevStep + 1);
-        router.push("/components/Propertylisting");
+        router.push("/Propertylisting");
       }, 3000);
     }
   };

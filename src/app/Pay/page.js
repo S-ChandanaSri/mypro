@@ -18,28 +18,7 @@ export default function Pay({ listingid, salary }) {
   };
   console.log("add", addition);
 
-  fetch("http://localhost:3001/pay", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ addition, id: listingid }),
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      return response.text().then((text) => {
-        throw new Error(text);
-      });
-    })
-    .then((data) => {
-      console.log("Response data:", data);
-      console.log("success");
-
-      console.log("success", data.id);
-    })
-    .catch((err) => console.error("Error:", err));
+  
   return (
     <>
       <div className="w-[1166px]">

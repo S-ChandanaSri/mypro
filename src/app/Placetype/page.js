@@ -11,30 +11,7 @@ export default function Placetype({ listingid }) {
     setPlacetype(selectedOption.label);
   };
 
-  useEffect(() => {
-    if (placetype && listingid) {
-      fetch("http://localhost:3001/placetype", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ placetype, id: listingid }),
-      })
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          }
-          return response.text().then((text) => {
-            throw new Error(text);
-          });
-        })
-        .then((data) => {
-          console.log("Response data:", data);
-          console.log("success");
-        })
-        .catch((err) => console.error("Error:", err));
-    }
-  }, [placetype, listingid]);
+  
 
   return (
     <Placet

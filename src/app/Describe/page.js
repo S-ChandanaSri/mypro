@@ -12,28 +12,7 @@ export default function Describe({ listingid }) {
 
   console.log(";;;;;", text);
 
-  fetch("http://localhost:3001/descriptionn", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ text, id: listingid }),
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      return response.text().then((text) => {
-        throw new Error(text);
-      });
-    })
-    .then((data) => {
-      console.log("Response data:", data);
-      console.log("success");
 
-      console.log("success", data.id);
-    })
-    .catch((err) => console.error("Error:", err));
   return (
     <>
       <div className="w-[1166px]">

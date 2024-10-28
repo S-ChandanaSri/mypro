@@ -35,7 +35,7 @@ const Counter: React.FC<CounterProps> = ({
 }) => {
   return (
     <>
-      <div className="relative top-[106px] mb-[30px] flex h-[38px] w-[667px] justify-between">
+      <div className="relative top-[126px] mb-[30px] flex h-[38px] w-[667px] justify-between">
         <p className="custo-font h-[38px] w-[88px] text-[25px] font-[300] leading-[37.5px] tracking-[0.46px] text-[#000000]">
           {label}
         </p>

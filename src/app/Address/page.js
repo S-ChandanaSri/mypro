@@ -35,28 +35,7 @@ export default function Address({ listingid }) {
     }));
   };
 
-  useEffect(() => {
-    fetch("http://localhost:3001/address", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ address, id: listingid }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        return response.text().then((text) => {
-          throw new Error(text);
-        });
-      })
-      .then((data) => {
-        console.log("Response data:", data);
-        console.log("success");
-      })
-      .catch((err) => console.error("Error:", err));
-  }, [address, listingid]);
+  
 
   useEffect(() => {
     if (iframeRef.current) {

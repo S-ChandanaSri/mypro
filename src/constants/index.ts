@@ -88,6 +88,8 @@ export const PATHS = {
   aboutUs: "/about-us",
   login: "/login",
   signUp: "/signup",
+  Steps: "/Steps",
+  Imagesstep: "/Imagesstep",
   forgotPassword: "/forgot-password",
 };
 

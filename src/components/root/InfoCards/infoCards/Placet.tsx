@@ -17,8 +17,8 @@ const Placetype: React.FC<InfoCardsProps> = ({
 }) => {
   return (
     <>
-      <div className="relative left-[450px] flex h-[670px] flex-col items-center">
-        <div className="relative top-[55px] h-[106px] w-[640px] gap-[46px]">
+      <div className="relative mx-auto flex h-[670px] flex-col items-center">
+        <div className="relative top-[65px] h-[106px] w-[640px] gap-[46px]">
           <p className="custo-font h-[53px] w-[640px] text-center text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]">
             {title}
           </p>

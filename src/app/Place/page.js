@@ -29,44 +29,12 @@ export default function Place({
     setSelectedOption(option);
   };
 
-  useEffect(() => {
-    if (selectedOption) {
-      setIsLoading(true);
-
-      const id = uuidv4();
-
-      console.log("kk", id);
-
-      fetch("http://localhost:3001/sendplace", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ selectedOption, id }),
-      })
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          }
-          return response.text().then((text) => {
-            throw new Error(text);
-          });
-        })
-        .then((data) => {
-          console.log("Response data:", data);
-          setListingid(data.id || id);
-          setIsLoading(false);
-        })
-        .catch((err) => {
-          console.error("Error:", err);
-          setIsLoading(false);
-        });
-    }
-  }, [selectedOption, setIsLoading, setListingid]);
+  
 
   return (
     <>
-      <div className="ml-[450px] flex h-[42rem] flex-col items-center">
+   
+      <div className="mx-auto pt-7 flex h-[42rem] flex-col items-center">
         <div className="mt-[28px] h-[6rem] w-[36rem] gap-[46px]">
           <p className="custo-font h-[6rem] w-[36rem] text-center text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]">
             Which of these best describes your place?
