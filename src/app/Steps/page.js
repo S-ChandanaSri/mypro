@@ -9,7 +9,7 @@ import d from "../../../public/res/images/components/d.png";
 //import Select from 'react-select';
 import countryList from "react-select-country-list";
 import Amenities1 from "../Amenities1/page.js";
-import Amenities2 from "../Amenities2/page.jsx";
+import Amenities2 from "../Amenities2/page.tsx";
 import Place from "../Place/page.js";
 import Placetype from "../Placetype/page.js";
 import Location from "../Location/page.js";
