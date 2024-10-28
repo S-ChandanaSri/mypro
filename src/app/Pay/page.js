@@ -18,7 +18,6 @@ export default function Pay({ listingid, salary }) {
   };
   console.log("add", addition);
 
-  
   return (
     <>
       <div className="w-[1166px]">

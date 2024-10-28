@@ -4,13 +4,12 @@ import People from "@/components/root/InfoCards/infoCards/People";
 import { peopletypeinfo } from "@/constants/arrays";
 import { strings } from "@/constants/strings";
 
-export default function Peopletype({ listingid }) {
+export default function Peopletype() {
   const [peopletype, setPeopletype] = useState(null);
 
   const handlepeople = (secondoption) => {
     setPeopletype(secondoption.label);
   };
- 
 
   return (
     <People

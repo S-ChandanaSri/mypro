@@ -106,8 +106,6 @@ export default function Imageslist({ listingid }) {
 
   console.log("88888888888", files);
 
- 
-
   const handleDragStart = (ev) => {
     const id = ev.currentTarget.id;
     ev.dataTransfer.setData("text/plain", id);

@@ -10,7 +10,7 @@ import {
 import { useRouter } from "next/navigation";
 import InfoCards from "@/components/root/InfoCards/infoCards/Amenities";
 
-export default function Amenities({ listingid }) {
+export default function Amenities() {
   const [selectedoption, setSelectedOption] = useState([]);
   const router = useRouter();
 
@@ -41,8 +41,6 @@ export default function Amenities({ listingid }) {
       setSelectedOption([...selectedoption, option3.label]);
     }
   };
-
- 
 
   return (
     <>

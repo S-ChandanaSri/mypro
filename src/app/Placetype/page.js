@@ -4,14 +4,12 @@ import { placetypeinfo } from "@/constants/arrays";
 import { strings } from "@/constants/strings";
 import Placet from "@/components/root/InfoCards/infoCards/Placet";
 
-export default function Placetype({ listingid }) {
+export default function Placetype() {
   const [placetype, setPlacetype] = useState(null);
 
   const handletype = (selectedOption) => {
     setPlacetype(selectedOption.label);
   };
-
-  
 
   return (
     <Placet

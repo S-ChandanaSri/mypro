@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export default function Describe({ listingid }) {
+export default function Describe() {
   const [text, setText] = useState("");
 
   const handleTextChange = (event) => {
@@ -11,7 +11,6 @@ export default function Describe({ listingid }) {
   };
 
   console.log(";;;;;", text);
-
 
   return (
     <>

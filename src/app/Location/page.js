@@ -2,7 +2,7 @@
 import React from "react";
 //import { useLocation, useNavigate } from 'react-router-dom';
 
-export default function Location({ listingid }) {
+export default function Location() {
   //const location = useLocation();
   //console.log("llllllllllll",location.state)
   //const { listingid } = location.state || {};

@@ -4,7 +4,7 @@ import Image from "next/image";
 import List from "@/components/root/Propertycard/List";
 import makiarrow from "../../public/res/icons/downArrow.svg";
 import Filter from "../components/root/Filter/index";
-import FilterOptionFlow from './filterOptionFlow/page';
+import FilterOptionFlow from "./filterOptionFlow/page";
 
 import {
   GetInTouchInfo,
@@ -130,7 +130,6 @@ function Home() {
       />
       <Hero />
 
-
       <Filter setOpen={handlefilter} />
       {Openn && <FilterOptionFlow setPopup={setOpen} />}
 
@@ -170,7 +169,7 @@ function Home() {
       </div>
 
       <div className="space-y-32">
-          {/*<InfoCards
+        {/*<InfoCards
           title={strings.landing.ourServices.heading}
           subText={strings.landing.ourServices.subHeading}
           cards={OurServicesInfo}

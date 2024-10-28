@@ -216,8 +216,6 @@ export default function Steps() {
     } else if (step === 7) {
       console.log("Listing ID before fetch:", listingid);
 
-    
-
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
@@ -251,7 +249,6 @@ export default function Steps() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#FFFFFF]">
-      
       <div className="flex-grow">
         <div className="flex min-h-screen items-center">
           {step === 0 && <Options />}
@@ -280,7 +277,7 @@ export default function Steps() {
             </>
           )}
           {step === 2 && (
-            <Place 
+            <Place
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}
               setIsLoading={setIsLoading}

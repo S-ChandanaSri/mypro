@@ -60,7 +60,6 @@ export default function Propertylisting() {
   const [listt, setListt] = useState([]);
   const [query, setQuery] = useState("");
 
-
   let lastId = null;
   console.log("p", listt);
   if (listt && listt.length > 0) {

@@ -12,7 +12,6 @@ export default function Title({ listingid }) {
 
   console.log("title", textt);
 
- 
   return (
     <>
       <div className="w-[1166px]">

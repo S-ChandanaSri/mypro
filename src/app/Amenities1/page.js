@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Amenitie1 from "@/components/root/InfoCards/infoCards/Amenitie1";
 import { strings } from "@/constants/strings";
 
-export default function Amenities1({ listingid }) {
+export default function Amenities1() {
   const [guests, setGuests] = useState(0);
   const [bedrooms, setBedrooms] = useState(0);
   const [beds, setBeds] = useState(0);
@@ -16,8 +16,6 @@ export default function Amenities1({ listingid }) {
   if (listingid) {
     console.log("sssssssssssssss:", listingid);
   }
-
-
 
   return (
     <Amenitie1
