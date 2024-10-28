@@ -64,3 +64,4 @@ const Amenities2: React.FC<Amenities2Props> = ({
     </div>
   );
 };
+export default Amenities2;
