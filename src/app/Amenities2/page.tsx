@@ -4,13 +4,20 @@ import Image from "next/image";
 import plus1 from "../../../public/res/images/infoCards/plus1.png";
 import subt1 from "../../../public/res/images/infoCards/subt1.png";
 
-export default function Amenities2({
+interface Amenities2Props {
+  label1: string;
+  label2: string;
+  handleminus: () => void;
+  handleplus: () => void;
+  count: number;
+}
+const Amenities2: React.FC<Amenities2Props> = ({
   label1,
   label2,
   handleminus,
   handleplus,
   count,
-}) {
+}) => {
   return (
     <div>
       <div className="relative top-[106px] flex h-[2.5rem] w-[42rem] justify-between">
@@ -56,4 +63,4 @@ export default function Amenities2({
       </div>
     </div>
   );
-}
+};
