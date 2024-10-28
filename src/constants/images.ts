@@ -103,7 +103,7 @@ import { SocialPlatforms } from "./types";
 import icons from "../../public/res/images/teams/icons.svg";
 import check from "../../public/res/images/teams/check.svg";
 import sam from "../../public/res/images/teams/samantha.svg";
-import star from "../../public/res/images/teams/Vstar.svg";
+import star from "../../public/res/images/teams/vstar.svg";
 
 import roomAc from "../../public/res/icons/ac.svg";
 import roomBar from "../../public/res/icons/bar.svg";

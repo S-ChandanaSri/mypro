@@ -6,7 +6,7 @@ import arrowd from "../../../public/res/images/components/arrowd.png";
 import Vector from "../../../public/res/images/components/Vector.png";
 import plus from "../../../public/res/images/components/plus.png";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from '../Navbar'
 
 export default function Listing() {
   const options = ["Beds", "Baths", "Bedrooms", "Amenities"];
