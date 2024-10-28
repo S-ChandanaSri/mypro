@@ -31,7 +31,7 @@ export default function Place({
 
   return (
     <>
-      <div className="mx-auto flex h-[42rem] flex-col items-center pt-7">
+      <div className="ml-[450px] flex h-[42rem] flex-col items-center">
         <div className="mt-[28px] h-[6rem] w-[36rem] gap-[46px]">
           <p className="custo-font h-[6rem] w-[36rem] text-center text-[35px] font-[400] leading-[52.5px] tracking-[0.46px] text-[#000000]">
             Which of these best describes your place?
