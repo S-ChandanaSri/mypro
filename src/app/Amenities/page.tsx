@@ -1,5 +1,4 @@
 //@ts-nocheck
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -12,7 +11,7 @@ import {
 import { useRouter } from "next/navigation";
 import InfoCards from "@/components/root/InfoCards/infoCards/Amenities";
 
-export default function Amenities({ listingid }) {
+export default function Amenities({ listingid }: { listingId: string }) {
   const [selectedoption, setSelectedOption] = useState([]);
   const router = useRouter();
 
