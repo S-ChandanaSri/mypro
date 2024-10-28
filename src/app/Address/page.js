@@ -12,7 +12,6 @@ export default function Address() {
   const [valuee, setValue] = useState(null);
   //const location = useLocation();
   //console.log("llllllllllll",location.state)
-  //const { listingid } = location.state || {};
 
   const [address, setAddress] = useState({
     road: "",
